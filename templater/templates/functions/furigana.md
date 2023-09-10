@@ -1,0 +1,1 @@
+<ruby><% tp.file.selection() %><rt><% tp.file.cursor(1) %></rt></ruby>
