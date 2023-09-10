@@ -1,0 +1,481 @@
+/*----------------------------------------------------------------------------------
+Personal theme with Nord coloring: https://www.nordtheme.com/
+
+Fonts are installed in my computer, and at the moment I'm using Hasklig and Space Mono
+These are just priority fonts though, if they don't exist, 
+the theme will default to obsidian default fonts
+-----------------------------------------------------------------------------------*/
+
+:root {
+  /*----------------------------------------------------------------
+  ------------------------------------------------------------------
+  COLORS DEFINED
+  ------------------------------------------------------------------
+  ----------------------------------------------------------------*/
+
+  /*----------------------------------------------------------------
+    Polar night: dark colors, nord 0-3
+  ----------------------------------------------------------------*/
+  --nord0: #2e3440;
+  --nord0-rgb: 46, 52, 64;
+  --nord1: #3b4252;
+  --nord1-rgb: 59, 66, 82;
+  --nord2: #434c5e;
+  --nord2-rgb: 67, 76, 94;
+  --nord3: #4c566a;
+  --nord3-rgb: 76, 86, 106;
+  /*----------------------------------------------------------------
+    Snow storm: light colors, nord 4-6
+  ----------------------------------------------------------------*/
+  --nord4: #d8dee9;
+  --nord4-rgb: 216, 222, 233;
+  --nord5: #e5e9f0;
+  --nord5-rgb: 229, 233, 240;
+  --nord6: #eceff4;
+  --nord6-rgb: 236, 239, 244;
+  /*----------------------------------------------------------------
+    Frost: lighter blue colors, nord 7-10
+  ----------------------------------------------------------------*/
+  --nord7: #8fbcbb;
+  --nord7-rgb: 143, 188, 187;
+  --nord8: #88c0d0;
+  --nord8-rgb: 136, 192, 208;
+  --nord9: #81a1c1;
+  --nord9-rgb: 129, 161, 193;
+  --nord10: #5e81ac;
+  --nord10-rgb: 94, 129, 172;
+  /*----------------------------------------------------------------
+    Aurora: colorful, nord 11-15
+  ----------------------------------------------------------------*/
+  --nord11: #bf616a;
+  --nord11-rgb: 191, 97, 106;
+  --nord12: #d08770;
+  --nord12-rgb: 208, 135, 112;
+  --nord13: #ebcb8b;
+  --nord13-rgb: 235, 203, 139;
+  --nord14: #a3be8c;
+  --nord14-rgb: 163, 190, 140;
+  --nord15: #b48ead;
+  --nord15-rgb: 180, 142, 173;
+
+  /*----------------------------------------------------------------
+    extra colors
+  ----------------------------------------------------------------*/
+  --rose: #ed8aaf;
+  --rose-rgb: 237, 138, 175;
+  --nord6-off: #f6f7f8;
+  --nord6-off-rgb: 246, 247, 248; /*lighter than nord6*/
+  --nord6-off2: #f3f8fd;
+  --nord6-off2-rgb: 243, 248, 253;
+  --nord15-dark: #9a6d91;
+  --nord15-dark-rgb: 154, 109,145;
+
+   /* Default colors */
+   /*
+   --color-red-rgb: 233, 49, 71;
+   --color-red: #e93147;
+   --color-orange-rgb: 236, 117, 0;
+   --color-orange: #ec7500;
+   --color-yellow-rgb: 224, 172, 0;
+   --color-yellow: #e0ac00;
+   --color-green-rgb: 8, 185, 78;
+   --color-green: #08b94e;
+   --color-cyan-rgb: 0, 191, 188;
+   --color-cyan: #00bfbc;
+   --color-blue-rgb: 8, 109, 221;
+   --color-blue: #086ddd;
+   --color-purple-rgb: 120, 82, 238;
+   --color-purple: #7852ee;
+   --color-pink-rgb: 213, 57, 132;
+   --color-pink: #d53984;
+   */
+
+   /*----------------------------------------------------------------
+    Text Colors: Highlighters 
+    ----------------------------------------------------------------*/
+  --yellow-highlighter: #fff3a3a6;
+  --pink-highlighter: #ffb8eba6;
+  --red-highlighter: #ff5582a6;
+  --blue-highlighter: #adccffa6;
+  --green-highlighter: #bbfabba6;
+  --purple-highlighter: #d2b3ffa6;
+  --orange-highlighter: #ffb86ca6;
+  --grey-highlighter: #cacfd9a6;
+
+}
+
+/*----------------------------------------------------------------
+------------------------------------------------------------------
+  THEMES
+------------------------------------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+  Dark theme
+----------------------------------------------------------------*/
+
+.theme-dark {
+
+  /* Default colors */
+  --color-red-rgb: var(--nord11-rgb);
+  --color-red: var(--nord11);
+  --color-green-rgb: var(--nord14-rgb);
+  --color-green: var(--nord14);
+  --color-cyan-rgb: var(--nord8-rgb);
+  --color-cyan: var(--nord8);
+  --color-blue-rgb: var(--nord9-rgb);
+  --color-blue: var(--nord9);
+  --color-purple-rgb: var(--nord15-rgb);
+  --color-purple: var(--nord15);
+  --color-yellow-rgb: var(--nord13-rgb);
+  --color-yellow: var(--nord13);
+  --color-pink-rgb: var(--rose-rgb);
+  --color-pink: var(--rose);
+
+  /* Background colors */
+  --background-primary: var(--nord0);
+  --background-primary-alt: var(--nord1);
+  --background-secondary: var(--nord1);
+  --background-secondary-alt: var(--nord2);
+  
+  /* Text colors */
+  --text-normal: var(--nord6);
+  --text-muted: var(--nord5);
+  --text-faint: var(--nord4);
+  --text-on-accent: var(--nord0);
+  --text-on-accent-inverted: var(--nord6-off2);
+  --text-highlight-bg-rgb: var(nord12-rgb);
+
+  /* Header colors */
+  --h1-color: var(--nord12);
+  --h2-color: var(--nord13);
+  --h3-color: var(--nord14);
+  --h4-color: var(--nord15);
+  --h5-color: var(--nord7);
+  --h6-color: var(--nord9);
+
+  /* Accents */
+  --accent-h: 194;
+  --accent-s: 35%;
+  --accent-l: 82%;
+  --color-accent: var(--nord8);
+  --nav-item-background-active: var(--nord14);
+
+  /* App color modifiers */
+  --background-modifier-border: var(--nord2);
+  --background-modifier-cover: rgba(var(--nord1-rgb), 0.6);
+  --background-modifier-border: var(--nord3);
+  --modal-border-color: var(--nord2);
+  --prompt-border-color: var(--nord2);
+
+  /* Tables */
+  --table-header-background: var(--nord10);
+  --table-header-background-hover: var(--nord9);
+  --table-row-background-hover: var(--nord8);
+  --table-row-even-background: var(--nord3);
+  --table-row-odd-background: var(--nord2);
+
+  /* Highlight colors */
+  --text-highlight-rgb: var(--pink-highlighter);
+
+  /* Checkbox colors */
+  --checkbox-color: var(--nord7);
+  --checkbox-color-hover: var(--nord7);
+  --checkbox-border-color: var(--nord7);
+  --checkbox-border-color-hover: var(--nord7);
+  --checklist-done-color: rgba(var(--nord6-rgb), 0.5);
+
+}
+
+/*----------------------------------------------------------------
+  Light theme
+----------------------------------------------------------------*/
+
+.theme-light {
+
+  /* Default colors */
+  --color-pink-rgb: var(--rose-rgb);
+  --color-pink: var(--rose);
+
+  /* Background colors */
+  --background-primary: var(--nord6-off);
+  --background-primary-alt: var(--nord6);
+  --background-secondary: var(--nord6);
+  --background-secondary-alt: var(--nord5);
+  
+  /* Text colors */
+  --text-normal: var(--nord2);
+  --text-muted: var(--nord3);
+  --text-faint: rgba(var(--nord3-rgb), 0.8);
+  --text-on-accent: var(--nord6-off2);
+  --text-on-accent-inverted: var(--nord1);
+  --text-highlight-bg-rgb: var(nord12-rgb);
+
+  /* Header colors */
+  --h1-color: var(--nord9);
+  --h2-color: var(--nord7);
+  --h3-color: var(--nord15);
+  --h4-color: var(--nord14);
+  --h5-color: var(--nord13);
+  --h6-color: var(--nord12);
+
+  /* Accents */
+  --accent-h: 354; 
+  --accent-s: 42%;
+  --accent-l: 56%;
+  --color-accent: var(--nord11);
+  --nav-item-background-active: var(--nord15);
+
+  /* App color modifiers */
+  --background-modifier-border: var(--nord5);
+  --background-modifier-cover: rgba(var(--nord4-rgb), 0.6);
+  --background-modifier-border: var(--nord4);
+  --modal-border-color: var(--nord6);
+  --prompt-border-color: var(--nord6);
+
+  /* Tables */
+  --table-header-background: var(--nord10);
+  --table-header-background-hover: var(--nord9);
+  --table-row-background-hover: var(--nord8);
+  --table-row-even-background: var(--nord3);
+  --table-row-odd-background: var(--nord2);
+
+
+  /* Callout colors */
+  --callout-default: var(--nord8-rgb);
+
+  /* Highlight colors */
+  --text-highlight-rgb: var(--yellow-highlighter);
+
+  /* Checkbox colors */
+  --checkbox-color: var(--nord7);
+  --checkbox-color-hover: var(--nord7);
+  --checkbox-border-color: var(--nord7);
+  --checkbox-border-color-hover: var(--nord7);
+  --checklist-done-color: rgba(var(--nord2-rgb), 0.4);
+   
+}
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+GENERAL STYLING
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+Body
+----------------------------------------------------------------*/
+
+/* Font settings */
+body {
+  /* Fonts */
+  --font-interface-override: 'Hasklig';
+  --font-monospace-override: 'Space Mono';
+
+  /* Text size*/
+  --font-text-size: 16px;
+  --nav-item-size 16px;
+  --font-ui-small: 14px;
+
+  /* Ligature Settings */
+  font-feature-settings: "liga" 0;
+  font-feature-settings: "tnum" "zero";
+
+  --p-spacing: 0.1px;
+  --heading-spacing: 2.5rem;
+}
+
+/* Block settings */
+body {
+
+  /* Code coloring */
+  --code-background: var(--background-primary-alt);
+  --code-normal: var(--text-muted);
+  --code-comment: var(--nord9);
+  --code-function: var(--nord13);
+  --code-important: var(--nord12);
+  --code-keyword: var(--rose);
+  --code-operator: var(--nord11);
+  --code-property: var(--nord8);
+  --code-punctuation: var(--text-faint);
+  --code-string: var(--nord14);
+  --code-tag: var(--nord11);
+  --code-value: var(--nord15);
+
+  /* Callout colors */
+  --callout-quote: var(--rose-rgb);
+}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+NOTE STYLING
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+Headers
+----------------------------------------------------------------*/
+  
+/* Editor: Ligature fix for the headings: letter-spacing: normal !important; */
+.cm-header {
+  text-rendering: optimizeLegibility;
+  letter-spacing: normal !important; 
+  font-feature-settings: "liga" 0;
+  margin-block-end: 1.2rem !important;
+}
+
+/* Preview: Ligature fix for the headings: letter-spacing: normal !important; */ 
+.markdown-preview-view h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  letter-spacing: normal !important; 
+  font-feature-settings: "liga" 0;
+  margin-block-end: 1.2rem !important;
+}
+
+
+
+/*----------------------------------------------------------------
+Paragraph Styling
+----------------------------------------------------------------*/
+
+/* 
+adding small padding to paragraphs 
+removing the margin for blocks
+*/
+
+p {
+  padding-top: 1em; 
+  padding-bottom: 0.1px; 
+  margin-block-start: 0; !important
+}
+
+.markdown-rendered p {
+  padding-top: 1em; 
+  padding-bottom: 0.1px; 
+  margin-block-start: 0; !important
+}
+
+/*----------------------------------------------------------------
+Highlighting (mark)
+----------------------------------------------------------------*/
+
+.markdown-preview-view mark {
+  font-weight: 500;
+  background-color: var(--text-highlight-rgb);
+}
+
+.cm-s-obsidian span.cm-highlight {
+  font-weight: 500;
+  background-color: var(--text-highlight-rgb);
+}
+
+/*----------------------------------------------------------------
+Code Styling: See more settings in better-code-block-adds snippet
+----------------------------------------------------------------*/
+
+/* I don't like ligatures in my code blocks. */
+
+.markdown-rendered code,
+.HyperMD-codeblock,
+.cm-s-obsidian
+  span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(
+    .obsidian-search-match-highlight
+  ) {
+  font-variant-ligatures: none;
+}
+
+/*----------------------------------------------------------------
+Table Styling
+----------------------------------------------------------------*/
+/*
+- headers in bold
+- different colors for odd and even number rows
+*/
+
+.markdown-rendered th {
+    margin-top: 2.5rem;
+}
+
+table {
+  border: 1px solid var(--background-secondary) !important;
+  border-collapse: collapse;
+  font: --var(--font-mono);
+  margin-block-start: 8px;
+  margin-block-end: 8px;
+}
+
+thead {
+  border-bottom: 2px solid var(--background-modifier-border) !important;
+}
+
+th {
+  border: 1px solid var(--background-secondary) !important;
+}
+
+td {
+  border-left: 1px solid var(--background-secondary) !important;
+  border-right: 1px solid var(--background-secondary) !important;
+  border-bottom: 1px solid var(--background-secondary) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even) {
+  background-color: var(--table-row-even-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(odd) {
+  background-color: var(--table-row-odd-background) !important;
+}
+
+.markdown-rendered tbody tr:nth-child(even):hover,
+.markdown-rendered tbody tr:nth-child(odd):hover {
+  background-color: var(--table-row-background-hover) !important;
+}
+
+/*----------------------------------------------------------------
+Images
+----------------------------------------------------------------*/
+
+/* White/light background for images with transparent background */
+img {
+  background: var(--nord6-off);
+}
+
+/*----------------------------------------------------------------
+Naked Embeds: No file name showing when embedding a file
+----------------------------------------------------------------*/
+
+.markdown-embed-title {
+  display: none;
+}
+.markdown-preview-view .markdown-embed {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.markdown-preview-view .markdown-embed-content {
+  max-height: unset;
+}
+.markdown-preview-view .markdown-embed-content > :first-child {
+  margin-top: 0;
+}
+.markdown-preview-view .markdown-embed-content > :last-child {
+  margin-bottom: 0;
+}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+APP MODIFICATIONS
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+Status Bar
+----------------------------------------------------------------*/
+
+/* position: unset docks the status bar */
+.app-container .status-bar {
+  position: unset;
+}
+

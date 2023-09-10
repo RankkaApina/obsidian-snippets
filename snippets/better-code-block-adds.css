@@ -1,0 +1,28 @@
+/* 
+Personal styling preferences for: https://github.com/stargrey/obsidian-better-codeblock
+This adds some padding to the code block, just note that the first 
+value needs to be 0 (top), otherwise the numbering will be off
+*/
+
+
+/* Adding some padding at the bottom
+padding top, right, bottom, left 
+*/
+.code-block-wrap > pre > code[class*=language-]{
+  padding: 0em 0em 1em 0em !important; 
+}
+
+/* Adding the padding made the folding to show part of the code */
+.obsidian-embedded-code-title__code-block-title[closed] + code[class*=language-]{
+  display: none;
+}
+
+/* Remove some space from around the line number */
+.code-block-linenum-wrap {
+  min-width: 2.5em;
+}
+
+/* Change the language name to fully lowercase */
+.obsidian-embedded-code-title__code-block-title .langName {
+  text-transform: lowercase;
+}
