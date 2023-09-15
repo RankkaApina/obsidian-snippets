@@ -1,0 +1,20 @@
+/* Minimum ligature fix for headings -> basic theme font doesn't have*/
+/* Source: https://forum.obsidian.md/t/broken-ligatures-in-headings-caused-by-css-letter-spacing/44444 */
+
+/* Font settings: fonts can be any font that has ligatures */
+body {
+    /* Fonts */
+    --font-interface-override: 'Hasklig';
+    --font-monospace-override: 'Space Mono';
+}
+
+/* Editor */
+.cm-header {
+  letter-spacing: normal !important; 
+}
+
+/* Preview */ 
+
+.markdown-preview-view h1, h2, h3, h4, h5, h6 {
+  letter-spacing: normal !important; 
+}

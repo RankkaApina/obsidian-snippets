@@ -1,9 +1,5 @@
 /*----------------------------------------------------------------------------------
-Personal theme with Nord coloring: https://www.nordtheme.com/
-
-Fonts are installed in my computer, and at the moment I'm using Hasklig and Space Mono
-These are just priority fonts though, if they don't exist, 
-the theme will default to obsidian default fonts
+ Theme based on my personal preferences and the Nord Theme: https://www.nordtheme.com/
 -----------------------------------------------------------------------------------*/
 
 :root {
@@ -61,14 +57,19 @@ the theme will default to obsidian default fonts
   /*----------------------------------------------------------------
     extra colors
   ----------------------------------------------------------------*/
-  --rose: #ed8aaf;
-  --rose-rgb: 237, 138, 175;
+
   --nord6-off: #f6f7f8;
   --nord6-off-rgb: 246, 247, 248; /*lighter than nord6*/
   --nord6-off2: #f3f8fd;
   --nord6-off2-rgb: 243, 248, 253;
   --nord15-dark: #9a6d91;
   --nord15-dark-rgb: 154, 109,145;
+
+  --rose: #ed8aaf;
+  --rose-rgb: 237, 138, 175;
+  --grey: #a4a8b0;
+  --grey-rgb: 164, 168, 176;
+
 
    /* Default colors */
    /*
@@ -287,7 +288,6 @@ body {
 
 /* Block settings */
 body {
-
   /* Code coloring */
   --code-background: var(--background-primary-alt);
   --code-normal: var(--text-muted);
@@ -304,6 +304,10 @@ body {
 
   /* Callout colors */
   --callout-quote: var(--rose-rgb);
+
+  /* Metadata settings */
+  --metadata-label-text-color: var(--code-keyword);
+  --metadata-label-width: 10em;
 }
 
 
@@ -463,6 +467,35 @@ Naked Embeds: No file name showing when embedding a file
   margin-bottom: 0;
 }
 
+/*----------------------------------------------------------------
+  Frontmatter Styling
+----------------------------------------------------------------*/
+
+/* Hide add property button */
+.metadata-add-button {
+  display: none;
+}
+/* Hide "Properties" title */
+.metadata-properties-heading {
+  display: none;
+}
+
+/* 
+Hide Properties in reading mode by default.
+Add "show_properties" to `css_classes` property to show them.
+Source: https://forum.obsidian.md/t/hide-show-properties-and-add-property-button-in-reading-mode/66209
+============================================================= */
+.workspace-leaf-content[data-mode="preview"]
+.markdown-preview-view
+.metadata-container{
+  display: none;
+}
+
+.workspace-leaf-content[data-mode="preview"]
+.markdown-preview-view.show_properties
+.metadata-container{
+  display: block;
+}
 
 /*----------------------------------------------------------------
 ----------------------------------------------------------------

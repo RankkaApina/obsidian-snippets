@@ -1,0 +1,42 @@
+/* -------------------------------------------------------------------------------------------------------------
+Gives some color to the frontmatter in editor (source mode)
+NOTE: THIS IS NOT SYNTAX HIGHLIGHTING! 
+It basically just identifies the frontmatter and modifies how it's displayed
+Source: https://forum.obsidian.md/t/frontmatter-html-div-block-and-css-class-for-first-and-second-dashes/39418/3
+------------------------------------------------------------------------------------------------------------- */
+
+/* Frontmatter edited as a block (styling applied individually to each line */
+.cm-s-obsidian .cm-line:has(> .cm-hmd-frontmatter) {
+    background-color: var(--code-background);
+    padding: 0 2em 0 1em;
+    /* border-radius: 3px; */
+}
+
+/* Rounding the corners of the frontmatter block and adding some padding */
+.cm-s-obsidian .cm-line:has(> .cm-hmd-frontmatter.cm-def):first-child {
+    border-top-right-radius: var(--code-radius);
+    border-top-left-radius: var(--code-radius);
+    padding-top: 0.5em;
+}
+.cm-s-obsidian .cm-line:has(> .cm-hmd-frontmatter):has(> .cm-def):not(:first-child) {
+    border-bottom-right-radius: var(--code-radius);
+    border-bottom-left-radius: var(--code-radius);
+    padding-bottom: 0.5em; 
+}
+
+/* Formatting ALL text */
+.cm-hmd-frontmatter {
+    font-size: var(--font-smaller);
+    color: var(--code-normal);
+}
+
+/* Keyword formatting */
+.cm-s-obsidian .cm-hmd-frontmatter.cm-atom {
+    color: var(--code-function);
+    padding: 0 2px 0 10px;
+}
+
+/* Yaml section divider formatting */
+.cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def {
+    color: var(--code-important);
+}

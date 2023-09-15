@@ -1,0 +1,28 @@
+/* Frontmatter mods (included in my nord theme */
+
+/* Hide add property button */
+.metadata-add-button {
+    display: none;
+}
+/* Hide "Properties" title */
+.metadata-properties-heading {
+    display: none;
+}
+
+
+/* 
+Hide Properties in reading mode by default.
+Add "show_properties" to `css_classes` property to show them.
+Source: https://forum.obsidian.md/t/hide-show-properties-and-add-property-button-in-reading-mode/66209
+============================================================= */
+.workspace-leaf-content[data-mode="preview"]
+.markdown-preview-view
+.metadata-container{
+    display: none;
+}
+
+.workspace-leaf-content[data-mode="preview"]
+.markdown-preview-view.show_properties
+.metadata-container{
+    display: block;
+}
