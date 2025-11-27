@@ -6,7 +6,6 @@ module.exports = async function getBibleVerseRange(tp) {
   let startVerse = await tp.system.prompt("Start verse:");
   let endChapter = await tp.system.prompt("End chapter:");
   let endVerse = await tp.system.prompt("End verse:");
-
   let verseStart = "";
   let verseEnd = "";
   

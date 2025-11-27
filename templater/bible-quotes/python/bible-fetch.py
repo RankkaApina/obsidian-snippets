@@ -47,7 +47,6 @@ def get_soup(query, version):
                    "&version=" + version)
   return BeautifulSoup(r.text, "html.parser")
 
-
 def clean(tag):
   for t in tag.find_all("sup"):
     if show_verse_numbers and "versenum" in t["class"]:
@@ -59,7 +58,6 @@ def clean(tag):
   for t in tag.find_all(class_="surface"):
     t.decompose()
 
-
 def render(tag):
   clean(tag)
   text = ""
@@ -70,7 +68,6 @@ def render(tag):
       text += "\n"
   return text
 
-
 def get_passages(soup):
   passages = soup.find_all(class_="passage-table")
   if passages is None:
@@ -80,13 +77,11 @@ def get_passages(soup):
     text += get_passage(p) + "\n\n"
   return text.replace('  ', ' ')
 
-
 def get_passage(soup):
   root = soup.find(class_="result-text-style-normal")
   if root is None:
     return
   return "\n\n".join(map(lambda t: render(t), root.select("p, div.poetry p")))
-
 
 query, version, show_verse_numbers, use_ascii = parse_args()
 soup = get_soup(query, version)

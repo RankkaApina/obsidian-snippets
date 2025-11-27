@@ -21,4 +21,4 @@ module.exports = async function getBibleReference(tp) {
     shortRef,
     fullRef,
   };
-};
+}

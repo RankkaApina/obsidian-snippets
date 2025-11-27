@@ -7,4 +7,3 @@ module.exports = async function sh(cmd) {
 	const result = await exec(cmd);
 	return { out: result.stdout.trim(), err: result.stderr.trim() };
 }
-

@@ -122,4 +122,4 @@ module.exports = async function getBibleBook(tp) {
 		bookTag,
 		bookAbbr,
 	};
-};
+}

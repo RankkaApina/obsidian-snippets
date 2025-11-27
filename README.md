@@ -13,4 +13,4 @@ I have a few templater snippets that basically just add a specific bible callout
 For the choose version: you can pick any version that is available in [BibleGateway](https://www.biblegateway.com/versions/). However, the command it uses assumes that your vault is in Windows and you are calling WSL with zsh and that your script is in folder that zsh has environment variable `$PYCODE` for. If you have configured python some other way, you might need to change this. You will only need to modify the command in the `getBibleQuote.js`. That is the only script that calls python.
 
 This is how it looks like with my custom callouts (of course you can modify them as you like):
-<img src="https://github.com/RankkaApina/obsidian-snippets/blob/alpha/img/bible-callouts.png" width="750">
+<img src="https://github.com/RankkaApina/obsidian-snippets/blob/alpha/img/bible-quote-callouts.png" width="750">
