@@ -1,0 +1,64 @@
+/*----------------------------------------------------------------
+------------------------------------------------------------------
+  CALLOUTS
+------------------------------------------------------------------
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+  GENERAL CALLOUT CHANGES
+----------------------------------------------------------------*/
+
+/*----------------------------------------------------------------
+  Thicker callout icon stroke
+  --callout-bold-color: bold color is the same as the --callout-color
+----------------------------------------------------------------*/
+
+.callout {
+  --callout-bold-color: rgba(var(--callout-color), 1);
+  --icon-stroke: 3px;
+}
+
+/*----------------------------------------------------------------
+  Bold color in callouts -> Callout color
+----------------------------------------------------------------*/
+
+.callout-content > p > strong,
+.callout-content > ul > li > strong,
+.callout-content > ol > li > strong {
+  color: var(--callout-bold-color);
+}
+
+.callout-title a {
+  color: var(--callout-bold-color);
+  font-weight: var(--bold-weight);
+}
+
+
+/*----------------------------------------------------------------
+  STYLING
+----------------------------------------------------------------*/
+
+/* Alternative styling for callouts from PLN (Pipe Loves Nord) theme
+Source: https://github.com/PipeItToDevNull/PLN/blob/master/theme.css
+*/
+
+body {
+  --callout-padding: 0;
+  --callout-title-padding: var(--size-4-2) var(--size-4-2) var(--size-4-2) var(--size-4-3);
+  --callout-content-padding: 0 var(--size-4-2) var(--size-4-2) var(--size-4-3);
+  --callout-radius: 5px;
+  --callout-border-opacity: 1;
+}
+
+/* remove leading and trailing padding of callout content paragraphs */
+.callout-content > p:first-child {
+  margin-top: 0px;
+}
+.callout-content > p:last-child {
+  margin-bottom: 0px;
+}
+
+.callout {
+  border-top: 4px solid rgba(var(--callout-color), 1.0);
+  border-left: 2px solid rgba(var(--callout-color), 1.0);
+}

@@ -1,0 +1,33 @@
+/*----------------------------------------------------------------
+------------------------------------------------------------------
+  CUSTOM CALLOUTS
+------------------------------------------------------------------
+----------------------------------------------------------------*/
+
+body {
+  --callout-bible: var(--color-blue-rgb);
+  --callout-bible2: var(--color-cyan-rgb);
+}
+
+/* Bible Quotes */
+.callout[data-callout="bible"],
+.callout[data-callout="bible2"] {
+  --callout-icon: var(--bible);
+  --par-top: 0;
+  --callout-margintop: 0;
+}
+.callout[data-callout="bible"] .callout-content li,
+.callout[data-callout="bible2"] .callout-content li {
+  list-style-type: none;
+}
+
+.callout[data-callout="bible"] .callout-content i,
+.callout[data-callout="bible"] .callout-content i {
+  color: rgba(var(--callout-color), 1);
+}
+.callout[data-callout="bible"] {
+  --callout-color: var(--callout-bible);
+}
+.callout[data-callout="bible2"] {
+  --callout-color: var(--callout-quote2);
+}
